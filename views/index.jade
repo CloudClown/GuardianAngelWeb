@@ -1,4 +1,16 @@
 extends layout
 
+block links
+  link(rel='stylesheet', href='/css/googlemap.css')
+
+block scripts
+  script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+  script(src='/js/underscore.js')
+  script(src='/js/angular-google-maps.js')
+  script(src='/js/googlemap.js')
+
 block content
-  h1 Google Maps
+  div(ng-app="googleMapApp")
+    div(ng-controller="googleMapCTRL")
+      google-map(center="map.center", zoom="map.zoom", draggable="true")
+        markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0")

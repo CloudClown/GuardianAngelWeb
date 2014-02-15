@@ -30,7 +30,7 @@ function informPhone(name, phone) {
 
     to: phone, 
     from: '+1 760-983-2393', 
-    url: 'http://guardianangel.herokuapp.com/callresponse'
+    url: 'http://guardianangel.herokuapp.com/callresponse/'+name
 
   });
 }
@@ -44,6 +44,6 @@ exports.all = function(req,res) {
     informEmail(contact.name, contact.email);
     informText(contact.name, contact.phone);
     informPhone(contact.name, contact.phone);
-    res.send("Success");
+    res.send(JSON.stringify("Success"));
   });
 };

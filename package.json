@@ -10,6 +10,7 @@
     "jade": "*",
     "node-sass": "*",
     "firebase": "*",
-    "sendgrid": "*"
+    "sendgrid": "*",
+    "twilio": "*"
   }
 }

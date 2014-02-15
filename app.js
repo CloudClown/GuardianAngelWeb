@@ -7,6 +7,7 @@ var routes = require('./routes');
 var nearby = require('./routes/nearby');
 var inform = require('./routes/inform');
 var register = require('./routes/register');
+var callresponse = require('./routes/callresponse');
 var http = require('http');
 var path = require('path');
 var sass = require('node-sass');
@@ -44,7 +45,11 @@ if ('development' === app.get('env')) {
 app.get('/', routes.index);
 app.get('/register', register.emergency);
 app.get('/nearby/:id/:level', nearby.danger);
-app.get('/inform', inform.email);
+//app.get('/inform', inform.email);
+//app.get('/inform', inform.text);
+//app.get('/inform', inform.call);
+app.get('/inform/:id', inform.all);
+app.get('/callresponse', callresponse.response)
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));

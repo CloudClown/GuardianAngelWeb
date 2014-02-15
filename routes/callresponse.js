@@ -4,7 +4,7 @@ exports.response = function(req,res) {
 
   resp.say({voice:'alice'}, 'ahoy hoy! Testing Twilio and node.js');
 
-  res.set(
+  res.set('content-type', 'text/xml'
     );
   res.send(resp.toString());
   console.log(req);

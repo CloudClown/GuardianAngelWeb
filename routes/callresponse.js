@@ -4,5 +4,5 @@ exports.response = function(req,res) {
   resp.say({voice:'alice'}, 'Emergency!, someone you know is in danger.  Please contact help.');
 
   res.writeHead(200, {'Content-Type': 'text/xml'});
-  res.end(twiml.toString());
+  res.end(resp.toString());
 };

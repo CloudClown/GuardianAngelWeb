@@ -30,7 +30,7 @@ function informPhone(name, phone) {
 
     to: phone, 
     from: '+1 760-983-2393', 
-    url: 'http://guardianangel.herokuapp.com/callresponse/
+    url: 'http://guardianangel.herokuapp.com/callresponse'
 
   });
 }

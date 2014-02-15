@@ -2,6 +2,7 @@ extends layout
 
 block links
   link(rel='stylesheet', href='/css/googlemap.css')
+  link(rel='stylesheet', href='/css/index.css')
 
 block scripts
   script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
@@ -10,7 +11,11 @@ block scripts
   script(src='/js/googlemap.js')
 
 block content
-  div(ng-app="googleMapApp")
-    div(ng-controller="googleMapCTRL")
-      google-map(center="map.center", zoom="map.zoom", draggable="true")
-        markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0")
+  div.hero
+    div.container
+      h1 Guardian Angel
+      h2 Let us keep you safe
+      div(ng-app="googleMapApp")
+        div(ng-controller="googleMapCTRL")
+          google-map.googlemap(center="map.center", zoom="map.zoom", draggable="true")
+            markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0")

@@ -11,11 +11,50 @@ block scripts
   script(src='/js/googlemap.js')
 
 block content
-  div.hero
+  header
     div.container
-      h1 Guardian Angel
-      h2 Let us keep you safe
+      div.title
+        span.title-text Guardian Angel
+      div.register
+        a.register-text(href="/register") Register
+  div.map-container
       div(ng-app="googleMapApp")
         div(ng-controller="googleMapCTRL")
           google-map.googlemap(center="map.center", zoom="map.zoom", draggable="true")
             markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0")
+  div.hero
+    div.container
+      h2 Let us keep you safe
+      p Guardian Angel is a platform designed to give you the best danger detection and prevention so that you can be more at peace.
+  div.subhero
+    div.col1
+      h2 Prevention
+      p Guardian Angel detects your danger level using the sensors built into Google Glass, combined with our custom algorithms to prevent unknowingly being in a hostile environment.
+    div.col2
+      h2 Security
+      p Learn about what areas are the most dangerous before you get there.  Using live updates from every customer, you can see the safety of areas around the world.
+    div.col3
+      h2 Safety
+      p A quick voice command will alert nearby citizens, police, family, and friends of your immediate danger.  Send real time updates of your status to the authorities.
+  div.hero.api-list
+    div.col1
+      a(href="http://www.android.com")
+        img.api(src="/img/android_logo.png")
+    div.col2
+      a(href="http://angularjs.org/")
+        img.api(src="/img/angularjs_logo.png")
+    div.col3
+      a(href="https://www.firebase.com/")
+        img.api(src="/img/firebase_logo.png")
+    div.col4
+      a(href="http://www.twilio.com/")
+        img.api(src="/img/twilio_logo.png")
+    div.col5
+      a(href="http://sendgrid.com/")
+        img.api(src="/img/sendgrid_logo.png")
+    div.col6
+      a(href="http://opencv.org/")
+        img.api(src="/img/opencv_logo.png")
+  footer
+    div.container
+      p All Rights Reserved.

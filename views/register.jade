@@ -2,4 +2,15 @@ extends layout
 
 block content
   h1 Register here
+  form(acion="register", method="post")
+    label id
+      input(name="id")
+    label name
+      input(name="name")
+    label phone
+      input(name="phone")
+    label email
+      input(name="email")
+    input(type='submit')
+    
 

@@ -16,8 +16,7 @@ function informEmail(name, email, loc, text) {
 var twilio = require('twilio')('AC04a0ee31cd6f7f96f6dca0b69f153a39', '81195b81193335d30ec064523e18f4e7');
 
 function informText(name, phone, loc, text) {
-  return twilio.sendMessage({
-
+  twilio.sendMessage({
     to: phone,
     from: '+1 760-983-2393',
     body: 'An emergency has occurred.  '+name+' is in danger! They were last found at '+ loc + '.  They last said: "'+text+'".',
@@ -47,9 +46,9 @@ exports.all = function(req,res) {
     userList.once('value', function(usershot) {
       var user = usershot.val()[id];
       if (contact !== null) {
+        informPhone(contact.name, contact.phone, contact.location, user.text);
         informEmail(contact.name, contact.email, contact.location, user.text);
         informText(contact.name, contact.phone, contact.location, user.text);
-        informPhone(contact.name, contact.phone, contact.location, user.text);
       }
 
     });

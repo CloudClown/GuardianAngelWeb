@@ -28,7 +28,7 @@ function informText(name, phone, loc, text) {
 
 function informPhone(name, phone, loc, text) {
   twilio.makeCall({
-    to: '+1 ' + phone, 
+    to: '+1' + phone, 
     from: '+1 760-983-2393', 
     url: 'http://guardianangel.herokuapp.com/callresponse/'+name+'/'+text+'/'+loc
   });

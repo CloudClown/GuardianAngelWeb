@@ -24,8 +24,13 @@ googleMapApp.controller('googleMapCTRL', function($scope, $firebase, geolocation
     }
     $scope.map.center.latitude = lat;
     $scope.map.center.longitude = lon;
-    $scope.$apply();
+
+    if(!$scope.$$phase) {
+      $scope.$apply();
+    }
+
   });
+
  angular.extend($scope, {
       map: {
         dragging: true,
@@ -54,7 +59,6 @@ $scope.users.$on("change", function() {
         if (status == google.maps.GeocoderStatus.OK) {
           var contacts = new Firebase("https://guardianangel.firebaseio.com/contacts/"+key);
           var curLoc = results[1].formatted_address;
-          console.log(results[1].formatted_address);
           contacts.update({location : curLoc});
 
         }

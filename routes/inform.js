@@ -42,9 +42,9 @@ exports.all = function(req,res) {
   contactList.once('value', function(snapshot) {
     var contact = snapshot.val()[id];
     if (contact !== null) {
-      informEmail(contact.name, contact.email, contacts.loc, contacts.text);
-      informText(contact.name, contact.phone, contacts.loc, contacts.text);
-      informPhone(contact.name, contact.phone, contacts.loc, contacts.text);
+      informEmail(contact.name, contact.email, contact.loc, contact.text);
+      informText(contact.name, contact.phone, contact.loc, contact.text);
+      informPhone(contact.name, contact.phone, contact.loc, contact.text);
     }
     res.send(JSON.stringify("Success"));
   });

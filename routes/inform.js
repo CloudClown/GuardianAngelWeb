@@ -7,7 +7,7 @@ function informEmail(name, email, loc, text) {
     to:       email,
     from:     'roberttnb@gmail.com',
     subject:  'WARNING: '+name+' is in danger!',
-    text:     name + ' has been found to be in danger through the surveillence of Guardian Angel.  Their current location is ' + loc + '.  The last things they said was"' +text+'".  You can see an up to date version of their location online.'
+    text:     name + ' has been found to be in danger through the surveillence of Guardian Angel.  Their current location is ' + loc + '.  The last things they said was"' +text+'".  You can see an up to date version of their location online.  http://guardianangel.herokuapp.com/'
   }, function(err, json) {
     if (err) { return console.error(err); }
   });

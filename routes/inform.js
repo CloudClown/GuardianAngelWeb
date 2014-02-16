@@ -32,7 +32,8 @@ function informPhone(name, phone, loc, text) {
   twilio.makeCall({
     to: phone, 
     from: '+17609832393', 
-    url: 'http://guardianangel.herokuapp.com/callresponse/'+n+'/'+t+'/'+l+'/'
+    url: 'http://guardianangel.herokuapp.com/callresponse/'+n+'/'+t+'/'+l+'/',
+    timeout: 15
   });
 }
 

@@ -13,28 +13,33 @@ googleMapApp.controller('googleMapCTRL', function($scope, $firebase, geolocation
 
   $scope.users = $firebase(users);
   geolocation.getLocation().then(function(data) {
-    if (data.coords.latitude == null) {
-      $scope.coords.lat =  43;
-      $scope.coords.lon = -73;
-      return;
+    var lat,lon;
+    if (data.coords.latitude === null) {
+      lat = 43;
+      lon = -73;
     }
-    $scope.center = {lat:data.coords.latitude, lon:data.coords.longitude};
+    else {
+      lat = data.coords.latitude;
+      lon = data.coords.longitude;
+    }
+    $scope.map.center.latitude = lat;
+    $scope.map.center.longitude = lon;
+    $scope.$apply();
   });
-
-  angular.extend($scope, {
-    map: {
-      dragging: true,
+ angular.extend($scope, {
+      map: {
+        dragging: true,
       center: {
-        latitude: $scope.coords.lat,
-        longitude: $scope.coords.lon
+        latitude: 43,
+        longitude: -73
       },
-      zoom: 6,
+      zoom: 13,
       markers: []
-    }
-  });
-console.log($scope.map);
+      }
+    });
+
 $scope.users.$on("change", function() {
-  var img;
+    var img;
     var keys = $scope.users.$getIndex();
     keys.forEach(function(key, i) {
       var lat = $scope.users[key].latitude;

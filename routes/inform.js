@@ -1,4 +1,4 @@
-var sendgrid  = require('sendgrid')('Zephoku', 'Midomi6592');
+var sendgrid  = require('sendgrid')('HackieJ', 'sendgrid8888');
 
 var Firebase = require('firebase');
 
@@ -41,7 +41,7 @@ exports.all = function(req,res) {
   contactList.on('value', function(snapshot) {
     var contact = snapshot.val()[id];
     if (contact != null) {
-      //informEmail(contact.name, contact.email);
+      informEmail(contact.name, contact.email);
       informText(contact.name, contact.phone);
       informPhone(contact.name, contact.phone);
     }

@@ -20,7 +20,8 @@ function informText(name, phone) {
 
     to: phone,
     from: '+1 760-983-2393',
-    body: 'An emergency has occurred.  '+name+' is in danger! '
+    body: 'An emergency has occurred.  '+name+' is in danger! ',
+    id:'test'
 
   });
 }
@@ -30,7 +31,7 @@ function informPhone(name, phone) {
 
     to: phone, 
     from: '+1 760-983-2393', 
-    url: 'http://guardianangel.herokuapp.com/callresponse'
+    url: 'http://guardianangel.herokuapp.com/callresponse/'+name
   });
 }
 

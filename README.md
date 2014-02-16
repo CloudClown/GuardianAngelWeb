@@ -10,8 +10,14 @@ Learn about what areas are the most dangerous before you get there. Using live u
 
 A quick voice command or gesture will alert nearby citizens, police, family, and friends of your immediate danger. Send real time updates of your status to the authorities.
 
+[Companion Guardian Angel Repo](https://github.com/CloudClown/GuardianAngel)
+
+[Guardian Angel Website](http://guardianangel.herokuapp.com)
+
 Screenshots
 -----
+[![screenshot1](https://github.com/Zephoku/GuardianAngelWeb/blob/master/examples/example1_thumb.png?raw=true "Guardian Angel Screenshot 1")](https://github.com/Zephoku/GuardianAngelWeb/blob/master/examples/example1.png)
+[![screenshot2](https://github.com/Zephoku/GuardianAngelWeb/blob/master/examples/example2_thumb.png?raw=true "Guardian Angel Screenshot 2")](https://github.com/Zephoku/GuardianAngelWeb/blob/master/examples/example2.png)
 
 Created by
 -----

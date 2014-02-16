@@ -41,6 +41,10 @@ exports.all = function(req,res) {
   var contactList = new Firebase("https://guardianangel.firebaseio.com/contacts");
   contactList.once('value', function(snapshot) {
     var contact = snapshot.val()[id];
+    console.log(contact.name);
+    console.log(contact.email);
+    console.log(contact.loc);
+    console.log(contact.text);
     if (contact !== null) {
       informEmail(contact.name, contact.email, contact.loc, contact.text);
       informText(contact.name, contact.phone, contact.loc, contact.text);

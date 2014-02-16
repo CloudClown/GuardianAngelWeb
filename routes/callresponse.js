@@ -1,9 +1,10 @@
 var twilio = require('twilio');
 exports.response = function(req,res) {
-  console.log(req.params.name);
   var name = req.params.name;
+  var loc = req.params.loc;
+  var text = req.params.text;
   var resp = new twilio.TwimlResponse();
-  resp.say({voice:'alice'}, 'Emergency!, '+name+' is in danger.  Please contact help.');
+  resp.say({voice:'alice'}, 'Emergency!, '+name+' is in danger.  Please contact help.  They were last seen at ' + loc +'.  They last said "'+text+'" ');
 
   res.set('Content-Type','text/xml');
   res.end(resp.toString());

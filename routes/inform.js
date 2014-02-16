@@ -39,17 +39,18 @@ function informPhone(name, phone, loc, text) {
 exports.all = function(req,res) {
   var id = req.params.id;
   var contactList = new Firebase("https://guardianangel.firebaseio.com/contacts");
+  var userList = new Firebase("https://guardianangel.firebaseio.com/users");
   contactList.once('value', function(snapshot) {
     var contact = snapshot.val()[id];
-    console.log(contact.name);
-    console.log(contact.email);
-    console.log(contact.loc);
-    console.log(contact.text);
-    if (contact !== null) {
-      informEmail(contact.name, contact.email, contact.loc, contact.text);
-      informText(contact.name, contact.phone, contact.loc, contact.text);
-      informPhone(contact.name, contact.phone, contact.loc, contact.text);
-    }
-    res.send(JSON.stringify("Success"));
+    userList.once('value', function(usershot) {
+      var user = usershot.val()[id];
+      if (contact !== null) {
+        informEmail(contact.name, contact.email, contact.location, user.text);
+        informText(contact.name, contact.phone, contact.location, user.text);
+        informPhone(contact.name, contact.phone, contact.location, user.text);
+      }
+
+    });
+        res.send(JSON.stringify("Success"));
   });
 };

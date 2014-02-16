@@ -19,5 +19,5 @@ exports.setContacts = function(req, res) {
     phone: phone,
     email: email
   });
-  res.render('register',{title: 'Guardian Angel'});
+  res.redirect("/");
 };

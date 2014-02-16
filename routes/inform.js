@@ -39,9 +39,9 @@ function informPhone(name, phone) {
 exports.all = function(req,res) {
   var id = req.params.id;
   var contactList = new Firebase("https://guardianangel.firebaseio.com/contacts");
-  contactList.on('value', function(snapshot) {
+  contactList.once('value', function(snapshot) {
     var contact = snapshot.val()[id];
-    if (contact != null) {
+    if (contact !== null) {
       informEmail(contact.name, contact.email);
       informText(contact.name, contact.phone);
       informPhone(contact.name, contact.phone);

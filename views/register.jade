@@ -1,16 +1,29 @@
 extends layout
 
+block links
+  link(rel='stylesheet', href='/css/index.css')
+  link(rel='stylesheet', href='/css/register.css')
+
 block content
-  h1 Register here
-  form(acion="register", method="post")
-    label id
-      input(name="id")
-    label name
-      input(name="name")
-    label phone
-      input(name="phone")
-    label email
-      input(name="email")
-    input(type='submit')
-    
+  header
+    div.container
+      div.title
+        a.title-text(href="/") Guardian Angel
+  .hero(ng-app)
+    .container(ng-controller="registerCtrl")
+      h1 Emergency Card
+      form(acion="register", method="post")
+        label Unique ID
+          input(name="id", type="text", placeholder="Tap Side of Glass", required)
+        label Full Name
+          input(name="name", type="text", placeholder="Mary Jane Smith", required)
+        label Emergency Phone Number
+          input(name="phone", type="text", placeholder="1235554444", required)
+        label Emergency Email
+          input(name="email", type="email", placeholder="Who do we email?", required)
+        input(type='submit')
+  footer
+    div.container
+      p All Rights Reserved.
+      
 

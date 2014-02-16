@@ -9,12 +9,9 @@ $max-width: em(960);
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  //background: url('/img/crossword.png');
-  //background: url('/img/green_dust_scratch.png');
-  //background: url('/img/text2.png')
-  //background: url('/img/grey_wash_wall.png')
   background: url('/img/ste.png');
 }
+
 header {
   height: $header-size;
   background-color: #020202;
@@ -31,6 +28,10 @@ header {
 .title {
   @include span-columns(6);
   text-align: left;
+  a:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
 }
 
 .register {

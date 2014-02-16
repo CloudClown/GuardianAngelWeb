@@ -12,19 +12,19 @@ block scripts
 
 block content
   header
-    div.container
-      div.title
-        span.title-text Guardian Angel
-      div.register
-        a.register-text(href="/register") Register
-  div.map-container
-      div(ng-app="googleMapApp")
-        div(ng-controller="googleMapCTRL")
-          google-map.googlemap(center="map.center", zoom="map.zoom", draggable="true")
-            markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0", icon="'icon'")
-      div.top-shadow
-      div.bottom-shadow
-  div.hero
+      div.container
+        div.title
+          a.title-text(href="/") Guardian Angel
+        div.register
+          a.register-text(href="/register") Register
+    div.map-container
+        div(ng-app="googleMapApp")
+          div(ng-controller="googleMapCTRL")
+            google-map.googlemap(center="map.center", zoom="map.zoom", draggable="true")
+              markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0", icon="'icon'")
+        div.top-shadow
+        div.bottom-shadow
+    div.hero
     div.container
       h2 Let us keep you safe
       p Guardian Angel is a platform designed to give you the best danger detection and prevention so that you can be more at peace.

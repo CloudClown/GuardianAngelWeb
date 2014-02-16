@@ -8,7 +8,7 @@ exports.danger = function(req, res) {
   var key;
   var inDangerUsers = [];
 
-  userList.on('value', function(snapshot) {
+  userList.once('value', function(snapshot) {
     var users = snapshot.val();
     var user = snapshot.val()[id];
     for(key in users) {

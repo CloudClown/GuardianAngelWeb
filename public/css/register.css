@@ -255,202 +255,24 @@ dl {
     .success a:hover, #flash_success a:hover {
       color: black; }
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  background: url('/img/ste.png'); }
-
-header {
-  height: 50px;
-  background-color: #020202;
-  width: 100%;
-  box-shadow: 0 5px 4px -2px #999; }
-
-.title-text {
-  color: #dfdfdf;
-  font-size: 2.4em;
-  line-height: 50px; }
-
-.title {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  text-align: left; }
-  .title:last-child {
-    margin-right: 0; }
-  .title a:hover {
-    cursor: pointer;
-    text-decoration: none; }
-
-.register {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  text-align: right; }
-  .register:last-child {
-    margin-right: 0; }
-
-.register-text:hover {
+.title a:hover {
+  cursor: pointer;
   text-decoration: none; }
 
-.register-text {
-  color: #020202;
-  letter-spacing: 1px;
-  font-size: 1.8em;
-  line-height: 50px;
-  padding: 15px 10px;
-  background-color: #FFD98B; }
-
-.subtitle {
-  color: #ddd;
-  margin: 20px;
-  font-size: 2.4em; }
-
-.map-container {
-  position: relative;
-  width: 100%;
-  height: 480px;
-  overflow: hidden; }
-
-h1, h2, p {
-  display: block;
-  text-align: center;
-  font-weight: 100; }
-
-h2 {
-  font-size: 40px;
-  margin: 30px 15px; }
-
-p {
-  font-size: 17px;
-  margin: 10px 10px;
-  line-height: 28px; }
+h1 {
+  font-size: 4.4em;
+  margin: 20px; }
 
 .hero {
-  box-shadow: 0 0 18px 4px #999;
-  width: 100%;
-  height: 200px;
-  background-color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f7f7f7));
-  background-image: -webkit-linear-gradient(#ffffff, #f7f7f7);
-  background-image: linear-gradient(#ffffff, #f7f7f7); }
+  height: 400px; }
 
-.subhero {
-  padding: 30px;
-  width: 100%;
-  height: 500px;
-  *zoom: 1;
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto;
-  color: #ddd; }
-  .subhero:before, .subhero:after {
-    content: " ";
-    display: table; }
-  .subhero:after {
-    clear: both; }
-  .subhero p {
-    font-size: 14px; }
-  .subhero h2 {
-    font-size: 30px;
-    font-weight: 300; }
-  .subhero img {
-    display: block;
-    margin: 0 auto 0 auto;
-    max-height: 100px; }
-  .subhero .col1, .subhero .col2, .subhero .col3 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    .subhero .col1:last-child, .subhero .col2:last-child, .subhero .col3:last-child {
-      margin-right: 0; }
-
-.container {
-  width: 860px; }
-
-.angular-google-map-container {
-  height: 480px;
-  width: 100%;
-  margin: 0px auto;
-  position: absolute; }
-  .angular-google-map-container img {
-    max-width: none; }
-
-.angular-google-map {
-  position: relative; }
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0.4; }
-
-  to {
-    opacity: 1; } }
-
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0.4; }
-
-  to {
-    opacity: 1; } }
-
-@-o-keyframes fadeIn {
-  from {
-    opacity: 0.4; }
-
-  to {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0.4; }
-
-  to {
-    opacity: 1; } }
-
-.api-list .col1, .api-list .col2, .api-list .col3, .api-list .col4, .api-list .col5, .api-list .col6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
+form {
   text-align: center;
-  line-height: 200px; }
-  .api-list .col1:last-child, .api-list .col2:last-child, .api-list .col3:last-child, .api-list .col4:last-child, .api-list .col5:last-child, .api-list .col6:last-child {
-    margin-right: 0; }
-.api-list .col6 {
-  margin-right: 0; }
-.api-list .api:hover {
-  -webkit-animation: fadeIn 0.2s ease-in-out 1 forwards;
-  -moz-animation: fadeIn 0.2s ease-in-out 1 forwards;
-  animation: fadeIn 0.2s ease-in-out 1 forwards; }
-.api-list img {
-  max-width: 100%;
-  min-width: 40%;
-  opacity: 0.4; }
+  margin: auto;
+  width: 400px; }
 
-footer {
-  width: 100%;
-  height: 80px;
-  color: #888;
-  background: url('/img/office.png'); }
+label {
+  font-size: 1.4em; }
 
-.top-shadow {
-  position: absolute;
-  display: block;
-  box-shadow: 0 5px 4px -2px #111;
-  top: -7px;
-  left: 0;
-  right: 0;
-  height: 5px; }
-
-.bottom-shadow {
-  position: absolute;
-  display: block;
-  box-shadow: 0 -3px 4px -2px #111;
-  bottom: -5px;
-  left: 0;
-  right: 0;
-  height: 5px; }
+input {
+  margin: 5px auto 14px auto; }

@@ -30,10 +30,9 @@ function informPhone(name, phone, loc, text) {
   var l = encodeURIComponent(loc);
   var t = encodeURIComponent(text);
   twilio.makeCall({
-    to: phone, 
+    to: '+1'+phone, 
     from: '+17609832393', 
-    url: 'http://guardianangel.herokuapp.com/callresponse/'+n+'/'+t+'/'+l+'/',
-    timeout: 15
+    url: 'http://guardianangel.herokuapp.com/callresponse/'+n+'/'+t+'/'+l+'/'
   });
 }
 
@@ -47,9 +46,9 @@ exports.all = function(req,res) {
     userList.once('value', function(usershot) {
       var user = usershot.val()[id];
       if (contact !== null) {
-        informPhone(contact.name, contact.phone, contact.location, user.text);
         informEmail(contact.name, contact.email, contact.location, user.text);
         informText(contact.name, contact.phone, contact.location, user.text);
+        informPhone(contact.name, contact.phone, contact.location, user.text);
       }
 
     });

@@ -27,10 +27,13 @@ function informText(name, phone, loc, text) {
 }
 
 function informPhone(name, phone, loc, text) {
+  var n = encodeURIComponent(name);
+  var l = encodeURIComponent(loc);
+  var t = encodeURIComponent(text);
   twilio.makeCall({
-    to: '+1' + phone, 
-    from: '+1 760-983-2393', 
-    url: 'http://guardianangel.herokuapp.com/callresponse/'+name+'/'+text+'/'+loc
+    to: phone, 
+    from: '+17609832393', 
+    url: 'http://guardianangel.herokuapp.com/callresponse/'+n+'/'+t+'/'+l+'/'
   });
 }
 

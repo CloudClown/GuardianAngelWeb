@@ -40,9 +40,11 @@ exports.all = function(req,res) {
   var contactList = new Firebase("https://guardianangel.firebaseio.com/contacts");
   contactList.on('value', function(snapshot) {
     var contact = snapshot.val()[id];
-    informEmail(contact.name, contact.email);
-    informText(contact.name, contact.phone);
-    informPhone(contact.name, contact.phone);
+    if (contact != null) {
+      //informEmail(contact.name, contact.email);
+      informText(contact.name, contact.phone);
+      informPhone(contact.name, contact.phone);
+    }
     res.send(JSON.stringify("Success"));
   });
 };

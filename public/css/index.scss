@@ -38,6 +38,10 @@ header {
   text-align: right;
 }
 
+.register-text:hover {
+  text-decoration: none;
+}
+
 .register-text {
   color: #020202;
   letter-spacing: 1px;
@@ -56,6 +60,8 @@ header {
 .map-container {
   position: relative;
   width: 100%;
+  height: 480px;
+  overflow: hidden;
 }
 
 h1,h2,p {
@@ -66,7 +72,7 @@ h1,h2,p {
 
 h2 {
   font-size: 40px;
-  margin: 30px;
+  margin: 30px 15px;
 }
 p {
   font-size: 17px;
@@ -81,8 +87,9 @@ p {
 @include linear-gradient(rgba(255,255,255,1), rgba(247,247,247,1));
 }
 .subhero {
+  padding: 30px;
   width: 100%;
-  height: 400px;
+  height: 500px;
   @include outer-container;
   color: #ddd;
   p {
@@ -93,11 +100,14 @@ p {
     font-size: 30px;
     font-weight: 300;
   }
-
-
+  img {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-height: 100px;
+  }
   .col1,
   .col2,
-  .col3{
+  .col3 {
     @include span-columns(4);
   }
   
@@ -114,7 +124,7 @@ p {
   height: 480px; 
   width: 100%;
   margin: 0px auto;
-  position: relative;
+  position: absolute;
 }
 
 .angular-google-map {
@@ -163,3 +173,16 @@ footer {
   background: url('/img/office.png');
 }
 
+.top-shadow {
+  position: absolute;
+  display: block;
+  box-shadow: 0 5px 4px -2px #111;
+  top: -7px; left: 0; right: 0; height: 5px; 
+}
+
+.bottom-shadow {
+  position: absolute;
+  display: block;
+  box-shadow: 0 -3px 4px -2px #111;
+  bottom: -5px; left: 0; right: 0; height: 5px; 
+}

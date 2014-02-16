@@ -46,7 +46,7 @@ app.get('/', routes.index);
 app.get('/register', register.emergency);
 app.post('/register', register.setContacts);
 app.get('/nearby/:id/:level', nearby.danger);
-app.get('/inform/:id', inform.all);
+//app.get('/inform/:id', inform.all);
 app.post('/callresponse', callresponse.response);
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -21,19 +21,24 @@ block content
       div(ng-app="googleMapApp")
         div(ng-controller="googleMapCTRL")
           google-map.googlemap(center="map.center", zoom="map.zoom", draggable="true")
-            markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0")
+            markers(models="map.markers", coords="'self'", labelContent="'title'", labelAnchor="22 0", icon="'icon'")
+      div.top-shadow
+      div.bottom-shadow
   div.hero
     div.container
       h2 Let us keep you safe
       p Guardian Angel is a platform designed to give you the best danger detection and prevention so that you can be more at peace.
   div.subhero
     div.col1
+      img(src="/img/danger@2x.png")
       h2 Prevention
       p Guardian Angel detects your danger level using the sensors built into Google Glass, combined with our custom algorithms to prevent unknowingly being in a hostile environment.
     div.col2
+      img(src="/img/potential@2x.png")
       h2 Security
       p Learn about what areas are the most dangerous before you get there.  Using live updates from every customer, you can see the safety of areas around the world.
     div.col3
+      img(src="/img/safe@2x.png")
       h2 Safety
       p A quick voice command will alert nearby citizens, police, family, and friends of your immediate danger.  Send real time updates of your status to the authorities.
   div.hero.api-list

@@ -290,6 +290,9 @@ header {
   .register:last-child {
     margin-right: 0; }
 
+.register-text:hover {
+  text-decoration: none; }
+
 .register-text {
   color: #020202;
   letter-spacing: 1px;
@@ -305,7 +308,9 @@ header {
 
 .map-container {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  height: 480px;
+  overflow: hidden; }
 
 h1, h2, p {
   display: block;
@@ -314,7 +319,7 @@ h1, h2, p {
 
 h2 {
   font-size: 40px;
-  margin: 30px; }
+  margin: 30px 15px; }
 
 p {
   font-size: 17px;
@@ -331,8 +336,9 @@ p {
   background-image: linear-gradient(#ffffff, #f7f7f7); }
 
 .subhero {
+  padding: 30px;
   width: 100%;
-  height: 400px;
+  height: 500px;
   *zoom: 1;
   max-width: 60em;
   margin-left: auto;
@@ -348,6 +354,10 @@ p {
   .subhero h2 {
     font-size: 30px;
     font-weight: 300; }
+  .subhero img {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-height: 100px; }
   .subhero .col1, .subhero .col2, .subhero .col3 {
     float: left;
     display: block;
@@ -363,7 +373,7 @@ p {
   height: 480px;
   width: 100%;
   margin: 0px auto;
-  position: relative; }
+  position: absolute; }
   .angular-google-map-container img {
     max-width: none; }
 
@@ -423,3 +433,21 @@ footer {
   height: 80px;
   color: #888;
   background: url('/img/office.png'); }
+
+.top-shadow {
+  position: absolute;
+  display: block;
+  box-shadow: 0 5px 4px -2px #111;
+  top: -7px;
+  left: 0;
+  right: 0;
+  height: 5px; }
+
+.bottom-shadow {
+  position: absolute;
+  display: block;
+  box-shadow: 0 -3px 4px -2px #111;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 5px; }
